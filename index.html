@@ -95,14 +95,9 @@
       letter-spacing: -0.03em;
     }
 
-    .header-card h1 .h1-sub {
-      display: block;
-      margin-top: 8px;
-      font-size: 16px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      color: rgba(255,255,255,0.72);
-    }
+    .header-card h1 .kw { color: #C9B6FF; }
+    .header-card h1 .kw-mint { color: #7CFFCB; }
+
 
     .info-grid {
       display: grid;
@@ -396,8 +391,7 @@
 </svg>
 
     <div class="badge">2026 엠클라우독 오프라인 하반기 세미나 참석 신청</div>
-    <h1>Deeper AI, Connected Work
-      <span class="h1-sub">한곳에 모인 문서로, 더 넓게 연결되는 AI</span></h1>
+    <h1><span class="kw">커넥터(MCP)</span>로 연결하고,<br><span class="kw">하이브리드</span>로 검색하고,<br>AI 문서 보안등급은 <span class="kw-mint">Deep mark</span>로!</h1>
     <div class="info-grid">
       <div class="info-item">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></div>
@@ -525,7 +519,7 @@
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, company, email, submitTime })
+        body: JSON.stringify({ name, company, email, submitTime, sheet: '2026 하반기 오프라인 세미나' })
       });
 
       // ── ② EmailJS 자동 회신 ───────────────────────────
@@ -536,7 +530,7 @@
         event_date:  "2026년 12월 9일 (수)",
         event_time:  "오후 2시 ~ 4시",
         event_place: "강남 인사이트 빌딩 (서울 강남구 역삼동 629-1 B1F)",
-        event_title: "Deeper AI, Connected Work (한곳에 모인 문서로, 더 넓게 연결되는 AI)"
+        event_title: "커넥터(MCP)로 연결하고, 하이브리드로 검색하고, AI 문서 보안등급은 Deep mark로!"
       });
 
       // 완료 화면 전환
